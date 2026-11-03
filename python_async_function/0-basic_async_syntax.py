@@ -4,7 +4,7 @@ from time import sleep
 from random import randrange
 
 
-def wait_random(max_delay=10):
+async def wait_random(max_delay=10):
     """waits a random time and returns said time
 
     Args:
