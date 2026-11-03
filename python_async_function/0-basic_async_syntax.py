@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""function for async task"""
-from random import uniform
-from asyncio import sleep
+"""coroutine for async task"""
+import asyncio
+import random
 
 
 async def wait_random(max_delay=10) -> float:
@@ -10,6 +10,6 @@ async def wait_random(max_delay=10) -> float:
     Args:
         max_delay (int, optional): max wait time. Defaults to 10.
     """
-    delay: float = uniform(0, max_delay)
-    await sleep(delay)
+    delay = random.uniform(0, max_delay)
+    await asyncio.sleep(delay)
     return delay
