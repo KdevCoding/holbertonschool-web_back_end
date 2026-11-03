@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """func for async"""
-from time import sleep
-from random import randrange
+from random import uniform
+from asyncio import sleep
 
 
 async def wait_random(max_delay=10):
@@ -10,6 +10,6 @@ async def wait_random(max_delay=10):
     Args:
         max_delay (int, optional): max wait time. Defaults to 10.
     """
-    delay = randrange(0, max_delay)
-    sleep(delay)
+    delay = uniform(0, max_delay)
+    await sleep(delay)
     return delay
