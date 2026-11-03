@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""func for async"""
+"""function for async task"""
 from random import uniform
 from asyncio import sleep
 
