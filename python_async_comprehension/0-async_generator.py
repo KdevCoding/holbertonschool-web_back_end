@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""A coroutine will loop 10 times,
-then yield a random number between 0 and 10
+"""Module that defines a coroutine which asynchronously yields random numbers.
 """
 
 import asyncio
 import random
+from typing import AsyncGenerator
 
 
-async def async_generator() -> float:
-    """loops 10 time asynchronously waiting 1 second each time
-    Yields: random float from 0 and 10
+async def async_generator() -> AsyncGenerator[float, None]:
+    """Loop 10 times, asynchronously wait 1 second each time, then yield
+    a random float between 0 and 10.
     """
     for _ in range(10):
         await asyncio.sleep(1)
